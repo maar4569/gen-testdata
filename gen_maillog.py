@@ -126,13 +126,13 @@ if __name__ == '__main__':
         username     = random_str(3) + "_" + random_str(4)
         syslog_msg = common_fields + " " + prog_smtp + " " + queid + ": " \
                      + "to=<" + username + "@" + dummy_domain() + ">, relay=destip:25, delay=0.21, delays=0.1/0/0.5/0.26, dsn=2.0.0,  status=send (250 2.0.0 "+ queid2 +" Message accepted for delivery)"
-	#syslog.syslog(syslog.LOG_INFO,syslog_msg)
+	syslog.syslog(syslog.LOG_INFO,syslog_msg)
         print syslog_msg
         
         #7.removed
         syslog_msg = tmp_date + " " + tmp_date  + " " + hostname + " " + syslogname + " " \
                      + prog_qmgr + " " + queid + ": " \
                      + "removed"
-	#syslog.syslog(syslog.LOG_INFO,syslog_msg)
+	syslog.syslog(syslog.LOG_INFO,syslog_msg)
         print syslog_msg
 
